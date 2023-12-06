@@ -40,7 +40,7 @@ int main() {
     }
     // Виведення книг, надрукованих в заданому році (наприклад, 2022)
     std::string desiredYear = "2022";
-    std::cout << "\nBooks printed in " << desiredYear << ":\n";
+    std::cout << "\nКниги, надруковані в " << desiredYear << ":\n";
     for (const auto& book : SHOP) {
         if (book.getData().find(desiredYear) != std::string::npos) {
             std::cout << "Ім'я: " << book.getName() << ",Автор: " << book.getAvtor() << ", Дата: " << book.getData() << ",Вартістьt: " << book.getCost() << "\n";
