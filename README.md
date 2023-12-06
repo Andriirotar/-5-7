@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-class BOOK {
+class Book {
 private:
     std::string Name;
     std::string Avtor;
