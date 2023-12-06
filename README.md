@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-class Book {
+#include <string>
+class BOOK {
 private:
     std::string Name;
     std::string Avtor;
@@ -11,6 +12,7 @@ public:
     BOOK(const std::string& name, const std::string& avtor, const std::string& data, double cost)
         : Name(name), Avtor(avtor), Data(data), Cost(cost) {}
     // Методи для доступу до полів класу
+
     std::string getName() const {
         return Name;
     }
@@ -40,10 +42,10 @@ int main() {
     }
     // Виведення книг, надрукованих в заданому році (наприклад, 2022)
     std::string desiredYear = "2022";
-    std::cout << "\nКниги, надруковані в " << desiredYear << ":\n";
+    std::cout << "\nBooks printed in " << desiredYear << ":\n";
     for (const auto& book : SHOP) {
         if (book.getData().find(desiredYear) != std::string::npos) {
-            std::cout << "Ім'я: " << book.getName() << ",Автор: " << book.getAvtor() << ", Дата: " << book.getData() << ",Вартістьt: " << book.getCost() << "\n";
+            std::cout << "Name: " << book.getName() << ", Author: " << book.getAvtor() << ", Date: " << book.getData() << ", Cost: " << book.getCost() << "\n";
         }
     }
     return 0;
